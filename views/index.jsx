@@ -4,7 +4,7 @@ const PageWrapper = require('./page');
 function Index() {
   return(
     <PageWrapper title="Home">
-      <h1>Hi</h1>
+      <h1 id="hi"></h1>
     </PageWrapper>
   );
 }
