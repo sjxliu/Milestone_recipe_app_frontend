@@ -19,6 +19,7 @@ export default function App() {
         console.log("error");
       });
   });
+  
   const searchResults = response.map((recipe, index) => {
     return <h6 key={index}>{recipe.title}</h6>;
   });

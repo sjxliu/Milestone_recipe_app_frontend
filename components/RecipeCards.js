@@ -1,16 +1,18 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Card, Button, CardGroup } from "react-bootstrap";
+import RecipeDescription from "./RecipeDescription";
 
-function RecipeCards({ img, title, summary, link }) {
+function RecipeCards({ img, link }) {
+
+  
   return (
     <div className="card-container">
       <CardGroup>
         <Card style={{ width: "18rem" }}>
           <Card.Img variant="top" src={img} />
           <Card.Body>
-            <Card.Title>{title}</Card.Title>
-            <Card.Text>{summary}</Card.Text>
+            <RecipeDescription />
             <Button variant="primary" href={link}>
               Go to recipe!
             </Button>
@@ -20,8 +22,7 @@ function RecipeCards({ img, title, summary, link }) {
         <Card style={{ width: "18rem" }}>
           <Card.Img variant="top" src={img} />
           <Card.Body>
-            <Card.Title>{title}</Card.Title>
-            <Card.Text>{summary}</Card.Text>
+            <RecipeDescription />
             <Button variant="primary" href={link}>
               Go to recipe!
             </Button>
@@ -31,8 +32,7 @@ function RecipeCards({ img, title, summary, link }) {
         <Card style={{ width: "18rem" }}>
           <Card.Img variant="top" src={img} />
           <Card.Body>
-            <Card.Title>{title}</Card.Title>
-            <Card.Text>{summary}</Card.Text>
+            <RecipeDescription />
             <Button variant="primary" href={link}>
               Go to recipe!
             </Button>
