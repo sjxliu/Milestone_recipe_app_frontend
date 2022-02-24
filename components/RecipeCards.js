@@ -1,43 +1,19 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Card, Button, CardGroup } from "react-bootstrap";
-import RecipeDescription from "./RecipeDescription";
+// import "bootstrap/dist/css/bootstrap.min.css";
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />;
 
-function RecipeCards({ image, link, id }) {
+function RecipeCards({ image, link, id, summary, title }) {
   return (
     <div className="card-container">
-      <CardGroup>
-        <Card style={{ width: "5rem" }}>
-          <Card.Img variant="top" src={image} />
-          <Card.Body key={id}>
-            <RecipeDescription title={RecipeDescription.title} />
-            <Button variant="primary" href={link}>
-              Go to recipe!
-            </Button>
-            <Button variant="success">Add to Favs</Button>
-          </Card.Body>
-        </Card>
-        {/* <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src={image} />
-          <Card.Body>
-            <RecipeDescription title={RecipeDescription.title} />
-            <Button variant="primary" href={link}>
-              Go to recipe!
-            </Button>
-            <Button variant="success">Add to Favs</Button>
-          </Card.Body>
-        </Card>
-        <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src={image} />
-          <Card.Body>
-            <RecipeDescription title={RecipeDescription.title}/>
-            <Button variant="primary" href={link}>
-              Go to recipe!
-            </Button>
-            <Button variant="success">Add to Favs</Button>
-          </Card.Body>
-        </Card> */}
-      </CardGroup>
+      <div className="w3-card-4" key={id}>
+        <img src={image} alt={image.alt} />
+        <div className="w3-container w3-center">
+          <h3>{title}</h3>
+          <p>{summary}</p>
+        </div>
+        <button href={link}>Go to recipe!</button>
+        <button>Add to Favs</button>
+      </div>
     </div>
   );
 }
