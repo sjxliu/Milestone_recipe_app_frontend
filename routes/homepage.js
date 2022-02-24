@@ -39,11 +39,6 @@ export default function App() {
             Munch Away
           </button>
         </section>
-        <RecipeList 
-        
-        // Should be the cards here
-
-        />
         <div>{searchResults}</div>
       </div>
     </div>
