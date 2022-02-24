@@ -1,6 +1,6 @@
 import "./index.css";
 import React, { useState, useEffect } from "react";
-import RecipeList from "./RecipeList";
+import RecipeList from "../components/RecipeCards";
 
 export default function App() {
   const APIKey = process.env.REACT_APP_SPOONACULAR_KEY;
