@@ -3,16 +3,24 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Card, Button, CardGroup } from "react-bootstrap";
 import RecipeDescription from "./RecipeDescription";
 
-function RecipeCards({ img, link }) {
-
-  
+function RecipeCards({ image, link, id }) {
   return (
     <div className="card-container">
       <CardGroup>
-        <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src={img} />
+        <Card style={{ width: "5rem" }}>
+          <Card.Img variant="top" src={image} />
+          <Card.Body key={id}>
+            <RecipeDescription title={RecipeDescription.title} />
+            <Button variant="primary" href={link}>
+              Go to recipe!
+            </Button>
+            <Button variant="success">Add to Favs</Button>
+          </Card.Body>
+        </Card>
+        {/* <Card style={{ width: "18rem" }}>
+          <Card.Img variant="top" src={image} />
           <Card.Body>
-            <RecipeDescription />
+            <RecipeDescription title={RecipeDescription.title} />
             <Button variant="primary" href={link}>
               Go to recipe!
             </Button>
@@ -20,25 +28,15 @@ function RecipeCards({ img, link }) {
           </Card.Body>
         </Card>
         <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src={img} />
+          <Card.Img variant="top" src={image} />
           <Card.Body>
-            <RecipeDescription />
+            <RecipeDescription title={RecipeDescription.title}/>
             <Button variant="primary" href={link}>
               Go to recipe!
             </Button>
             <Button variant="success">Add to Favs</Button>
           </Card.Body>
-        </Card>
-        <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src={img} />
-          <Card.Body>
-            <RecipeDescription />
-            <Button variant="primary" href={link}>
-              Go to recipe!
-            </Button>
-            <Button variant="success">Add to Favs</Button>
-          </Card.Body>
-        </Card>
+        </Card> */}
       </CardGroup>
     </div>
   );
