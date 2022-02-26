@@ -31,7 +31,7 @@ export default function App() {
      );
     const id = await response.json();
     setRecipeSum(id.summary);
-    setId(id.summary);
+    setId(data.id);
     console.log(id.summary);
   };
 
@@ -46,7 +46,7 @@ export default function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App" style={styling}>
       <h1>Got Munchies?</h1>
       <div className="search-form">
         <form onSubmit={getSearch} className="search-form">
