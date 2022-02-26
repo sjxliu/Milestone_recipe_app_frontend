@@ -1,4 +1,4 @@
-import "./index.css";
+import styling from "../public/css/main.css";
 import React, { useState, useEffect } from "react";
 import RecipeCards from "./components/RecipeCards";
 
@@ -18,7 +18,8 @@ export default function App() {
 
   const getRecipeData = async () => {
     const response = await fetch(
-    `https://api.spoonacular.com/recipes/complexSearch?query=${query}&apiKey=${APIKey}`);
+    //`https://api.spoonacular.com/recipes/complexSearch?query=${query}&apiKey=${APIKey}`
+    );
     const data = await response.json();
     setRecipeData(data.results);
     console.log(data.results);
@@ -26,8 +27,9 @@ export default function App() {
 
   const getRecipeSum = async () => {
     const response = await fetch(
-     `https://api.spoonacular.com/recipes/${id}/summary&apiKey=${APIKey}`);
-    const data = await response.json();
+     // `https://api.spoonacular.com/recipes/${id}/summary&apiKey=${APIKey}`
+     );
+    const id = await response.json();
     setRecipeSum(id.summary);
     setId(id.summary);
     console.log(id.summary);
